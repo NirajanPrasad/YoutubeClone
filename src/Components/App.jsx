@@ -2,7 +2,7 @@ import React from "react";
 import { Route, Routes, BrowserRouter } from "react-router-dom";
 
 import { AppContext } from "../Context/ContextApi";
-import { Header } from "./";
+import { Header, Feed } from "./";
 
 const App = () => {
   return (
@@ -11,7 +11,7 @@ const App = () => {
         <div className="flex flex-col h-full">
           <Header />
           <Routes>
-            <Route path="/" exact element={<p>Home</p>} />
+            <Route path="/" exact element={<Feed />} />
             <Route path="/searchResult/:searchQuery" element={<p>Search</p>} />
             <Route path="/video/:id" element={<p>Video</p>} />
           </Routes>

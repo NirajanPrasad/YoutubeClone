@@ -78,8 +78,8 @@ const Header = () => {
           <IoIosSearch className="text-white text-xl" />
         </button>
       </div>
-      <div className="flex items-center">
-        <div className="hidden md:flex">
+      <div className="flex">
+        <div className="hidden md:flex md:items-center">
           <div className="flex items-center justify-center h-10 w-10 rounded-full hover:bg-bg-[#303030]/[0.6]">
             <RiVideoAddLine className="text-white text-xl cursor-pointer" />
           </div>
@@ -88,7 +88,7 @@ const Header = () => {
           </div>
           <div className="flex h-8 w-8 overflow-hidden rounded-full md:ml-4">
             <img
-              src="https://xsgames.co/randomusers/assets/avatars/female/67.jpg"
+              src="https://xsgames.co/randomusers/assets/avatars/female/56.jpg"
               alt="Profile_Img"
             />
           </div>
