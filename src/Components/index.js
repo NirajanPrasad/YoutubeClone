@@ -5,6 +5,8 @@ import LeftNavMenuItem from "./LeftNavMenuItem";
 import VideoCard from "./VideoCard";
 import VideoDetails from "./VideoDetails";
 import SuggestionVideoCard from "./SuggestionVideoCard";
+import SearchResult from "./SearchResult";
+import SearchResultVideoCard from "./SearchResultVideoCard";
 
 export {
   Header,
@@ -14,4 +16,6 @@ export {
   VideoCard,
   VideoDetails,
   SuggestionVideoCard,
+  SearchResult,
+  SearchResultVideoCard,
 };

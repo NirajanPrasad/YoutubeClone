@@ -4,6 +4,7 @@ import ReactPlayer from "react-player";
 import { BsFillCheckCircleFill } from "react-icons/bs";
 import { AiOutlineLike } from "react-icons/ai";
 import { abbreviateNumber } from "js-abbreviation-number";
+import { AiFillEye } from "react-icons/ai";
 
 import { fetchDataFromApi } from "../Utils/Api";
 import { Context } from "../Context/ContextApi";
@@ -50,6 +51,7 @@ const VideoDetails = () => {
               width="100%"
               height="100%"
               style={{ backgroundColor: "#000000" }}
+              playing
             />
           </div>
 
@@ -91,7 +93,7 @@ const VideoDetails = () => {
                 )} Likes`}</span>
               </div>
               <div className="flex items-center justify-center h-11 px-6 rounded-3xl bg-white/[0.5] ml-4">
-                <AiOutlineLike className="text-xl text-white mr-2" />
+                <AiFillEye className="text-xl text-white mr-2" />
                 <span>{`${abbreviateNumber(
                   video?.stats?.views,
                   2
@@ -102,7 +104,7 @@ const VideoDetails = () => {
         </div>
 
         <div className="flex flex-col py-6 px-4 overflow-y-auto lg:w-[350px] xl:w-[400px]">
-          {relatedVideos.contents.map((item, index) => {
+          {relatedVideos?.contents?.map((item, index) => {
             if (item?.type !== "video") return false;
             return <SuggestionVideoCard key={index} video={item?.video} />;
           })}

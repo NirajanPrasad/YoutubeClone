@@ -2,7 +2,7 @@ import React from "react";
 import { Route, Routes, BrowserRouter } from "react-router-dom";
 
 import { AppContext } from "../Context/ContextApi";
-import { Header, Feed, VideoDetails } from "./";
+import { Header, Feed, VideoDetails, SearchResult } from "./";
 
 const App = () => {
   return (
@@ -12,7 +12,10 @@ const App = () => {
           <Header />
           <Routes>
             <Route path="/" exact element={<Feed />} />
-            <Route path="/searchResult/:searchQuery" element={<p>Search</p>} />
+            <Route
+              path="/searchResult/:searchQuery"
+              element={<SearchResult />}
+            />
             <Route path="/video/:id" element={<VideoDetails />} />
           </Routes>
         </div>
